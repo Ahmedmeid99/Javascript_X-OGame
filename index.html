@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- start from her -->
+<div class="bg_layer" id="from_layout">
+    <div class="message_box" id="from">
+        <p class="message_header center">X sv O Game</p>
+        <p class="message center small">start playing with your frind</p>
+        <div class="field">
+            <label for="input_P1_Name">Player 1</label>
+            <input type="text" name="p1_name" id="input_P1_Name">
+        </div>
+        <div class="field">
+             <label for="input_P2_Name">Player 2</label>
+        <input type="text" name="p2_name" id="input_P2_Name">
+        </div>
+        <div class="field">
+            <label for="nRound">Round</label>
+            <input type="number" name="nRound" id="round_count" min="1" value="1" step="2">
+       </div>
+       
+        <div class="field inline">
+            <label for="char">Player 1</label>
+            <select name="char" id="char">
+                <option value="X">X</option>
+                <option value="O">O</option>
+            </select>
+        </div>
+        
+        <button class="btn start_btn" id="start_btn">start Game</button>
+        <button class="btn close_btn" id="close_form_btn">close</button>
+    </div>
+    
+  </div>
+    <!-- Header -->
+     <div class="container">
+        <div class="game_header">
+            <div class="player me">
+                <span class="player_name" id="p1_name">Player 1</span>
+                <span> : </span>
+                <span id="p1_points">0</span>
+                <div class="player_char center" id="p1_char">x</div>
+            </div>
+            <div class="player">
+                <span class="player_name"  id="p2_name">Player 2</span>
+                <span> : </span>
+                <span id="p2_points">0</span>
+                <div  class="player_char center" id="p2_char">o</div>
+            </div>
+            <div class="rounds_box">
+                <sapn class="round_number" id="round_number">0</sapn>
+                <span>/</span>
+                <sapn class="all_rounds_conut" id="all_rounds_conut">0</sapn>
+            </div>
+        </div>
+        <div class="game_body">
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+            <div class="box flex"></div>
+        </div>
+        <div class="controls flex">
+            <button class="btn reset_btn"id="reset_btn">Start New Game</button>
+            <button class="btn reset_btn"id="continue_btn">Continue</button>
+
+        </div>
+        
+     </div>
+
+      <!--alert model -->
+      <!-- <div class="bg_layer">
+        <div class="alert_box">
+            <h5 class="alert_header">Congratulations !  &#x1F389;</h5>
+            <button class="btn alert_btn">&#x2716;</button>
+            <p class="message">player_1 win the game by 2 points from 3</p>
+            
+        </div>
+        
+      </div> -->
+
+      <audio id="success-sound" src="./audios/goodresult.mp3"></audio>
+
+    <!-- Error Sound -->
+    <audio id="error-sound" src="./audios/alert.mp3"></audio>
+     
+    <!-- Click sound -->
+    <audio id="click-sound" src="./audios/click.mp3"></audio>
+
+
+
+    <script src="./app.js"></script>
+</body>
+</html>

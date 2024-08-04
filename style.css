@@ -1,0 +1,232 @@
+
+:root{
+    --main-color:#6892E5;
+    --secondry-color:#7B81BE;
+    --secondry2-color:#f88AB0;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #eee;
+    font-family: system-ui;
+}
+
+/* ----------------------- */
+/*       Global Classes    */
+/* ----------------------- */
+.container{
+    width: 80%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inline{
+    display: inline !important;
+}
+.center{
+    text-align: center;
+}
+.small{
+    font-size: 14px;
+}
+
+.closed {
+    display: none !important;
+}
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+/* ----------------------- */
+/*         Game            */
+/* ----------------------- */
+
+.game_header{
+    position: relative;
+    background: var(--secondry-color);
+    padding: .5rem;
+    box-shadow: 10px 10px 24px #a6b4c8b5, -12px -12px 20px #ffffffd9;
+    margin: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.player{
+    padding: .5rem;
+    position: relative;
+    border: 2px solid #eee;
+    border-radius: 5px;
+}
+
+.player_char{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.player.active{
+    border: 2px solid var(--secondry2-color);
+}
+.player_name{
+    color: #eee;
+    padding: 0 5px;
+    font-family: cursive;
+}
+.rounds_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2.5rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    background: var(--secondry2-color);
+    border-radius: 50%;
+}
+.game_body{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+
+}
+.box{
+    width: 7rem;
+    height: 7rem;
+    flex-basis: 33%;
+    background: var(--secondry-color);
+    font-size: 50px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.box:hover{
+    background: #7b81bea6;
+}
+
+.fill_box{
+    background: #7b81bea6;
+}
+
+.box span{
+    transform: translateY(-4px);
+}
+
+/* ----------------------- */
+/*       Message Box       */
+/* ----------------------- */
+.bg_layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000059;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.message_box{
+    background: #fff;
+    width: fit-content;
+    padding: 1rem 1.5rem;
+}
+.message_header{
+    margin-bottom: 1rem;
+    background: var(--main-color);
+    padding: .5rem;
+}
+.message{
+    margin-bottom: .5rem;
+}
+.btn{
+    padding: .7rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* margin: .5rem .5rem 0; */
+}
+.btn.close_btn:hover{
+    background: #ddd;
+}
+.btn.start_btn{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.btn.start_btn:hover{
+    background: #4a69a7;   
+
+}
+.reset_btn{
+    background: var(--secondry2-color);
+    color: #fff;
+    margin: 0 1rem;
+}
+.reset_btn:hover{
+    background: #a1224e;   
+}
+
+.alert_box{
+    position: relative;
+    padding: 3rem;
+    background: #fff;
+    width: fit-content;
+}
+.alert_header{
+    text-align: center;
+    padding: .5rem;
+    font-size: 1.3rem;
+    color: var(--secondry2-color);
+}
+.alert_btn{
+    padding: 0;
+    border-radius: 50%;
+    font-size: .8rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 1rem;
+    position: absolute;
+    right: .5rem;
+    top: .5rem;
+}
+/* -------------------- */
+/*        form          */
+/* -------------------- */
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.field label{
+    font-size: .9rem;
+    margin-bottom: .5rem;
+    color: #666;
+}
+.field input{
+    padding: .5rem .8rem;
+    border: 1px solid var(--main-color);
+    outline: none;
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+.field select{
+    padding: .56rem 1rem;
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+.field  option{
+    color: var(--main-color);
+    font-weight: 900;
+}
+
