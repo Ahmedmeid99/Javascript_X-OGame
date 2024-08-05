@@ -377,6 +377,7 @@ boxes.forEach((box) => {
                         : game.player_2_Points++;
                         UI.AlertWinInGame();
                         UI.UpdateUI();
+                        UI.freezRound();
                         return;
             }
         } else if (
@@ -388,10 +389,12 @@ boxes.forEach((box) => {
             if (gameWinnerObj.Roundwinner == null && gameWinnerObj.isDraw == true) {
                 console.log("-2");
                 UI.AlertDrawInGame();
+                UI.freezRound();
                 return;
             } else if (gameWinnerObj.Roundwinner != null  && game.IsGameEnd()) {
                 console.log("-3");
                 UI.AlertWinInGame();
+                UI.freezRound();
                 return;
             } else {
                 console.log("-4");
