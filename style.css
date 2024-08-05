@@ -23,6 +23,12 @@ body{
     width: 80%;
     margin: auto;
 }
+@media screen {
+    .container{
+        width: 95%;
+        margin: auto;
+    }
+}
 .flex{
     display: flex;
     justify-content: center;
