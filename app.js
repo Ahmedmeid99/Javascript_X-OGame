@@ -389,7 +389,7 @@ boxes.forEach((box) => {
                 console.log("-2");
                 UI.AlertDrawInGame();
                 return;
-            } else if (gameWinnerObj.Roundwinner != null && roundWinnerObj.Roundwinner != null ) {
+            } else if (gameWinnerObj.Roundwinner != null  && game.IsGameEnd()) {
                 console.log("-3");
                 UI.AlertWinInGame();
                 return;
